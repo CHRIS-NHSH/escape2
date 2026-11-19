@@ -18,7 +18,6 @@
     --accent-red: #e63946;
     --accent-red-glow: rgba(230, 57, 70, 0.55);
     --btn-bg: #2b333b;
-    --btn-hover: #38424d;
   }
 
   * {
@@ -30,8 +29,8 @@
     margin: 0;
     padding: 16px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-main);
+    background-color: #121619;
+    color: #e8ecef;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -42,8 +41,8 @@
   .terminal-container {
     width: 100%;
     max-width: 540px;
-    background-color: var(--panel-bg);
-    border: 2px solid var(--border-color);
+    background-color: #1e2429;
+    border: 2px solid #343e46;
     border-radius: 14px;
     padding: 20px;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
@@ -53,7 +52,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid #343e46;
     padding-bottom: 12px;
     margin-bottom: 16px;
   }
@@ -62,41 +61,40 @@
     font-size: 1.25rem;
     margin: 0;
     letter-spacing: 1px;
-    color: var(--accent-amber);
+    color: #ffb703;
   }
 
   .status-badge {
     font-size: 0.85rem;
     padding: 4px 10px;
     border-radius: 20px;
-    background-color: var(--btn-bg);
-    border: 1px solid var(--border-color);
+    background-color: #2b333b;
+    border: 1px solid #343e46;
     font-weight: bold;
   }
 
   .status-badge.unlocked {
     background-color: rgba(46, 196, 182, 0.15);
-    border-color: var(--accent-green);
-    color: var(--accent-green);
+    border-color: #2ec4b6;
+    color: #2ec4b6;
   }
 
   .story-box {
     background-color: rgba(0, 0, 0, 0.25);
-    border-left: 4px solid var(--accent-amber);
+    border-left: 4px solid #ffb703;
     padding: 12px 14px;
     border-radius: 6px;
     font-size: 0.95rem;
     margin-bottom: 18px;
-    color: var(--text-main);
+    color: #e8ecef;
   }
 
-  /* 信號燈區域 */
   .signal-stage {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #14181c;
-    border: 1px solid var(--border-color);
+    border: 1px solid #343e46;
     border-radius: 10px;
     padding: 20px 16px;
     margin-bottom: 18px;
@@ -124,26 +122,27 @@
   }
 
   .lamp-bulb.active {
-    background-color: var(--accent-amber);
-    box-shadow: 0 0 28px 8px var(--accent-amber-glow);
+    background-color: #ffb703;
+    box-shadow: 0 0 28px 8px rgba(255, 183, 3, 0.65);
   }
 
   .lamp-bulb.solved {
-    background-color: var(--accent-green);
-    box-shadow: 0 0 28px 8px var(--accent-green-glow);
+    background-color: #2ec4b6;
+    box-shadow: 0 0 28px 8px rgba(46, 196, 182, 0.55);
   }
 
   .lamp-bulb.error {
-    background-color: var(--accent-red);
-    box-shadow: 0 0 28px 8px var(--accent-red-glow);
+    background-color: #e63946;
+    box-shadow: 0 0 28px 8px rgba(230, 57, 70, 0.55);
   }
 
   .signal-indicator-text {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: #9aa5b1;
     min-height: 1.4em;
     margin-bottom: 12px;
     font-family: monospace;
+    text-align: center;
   }
 
   .controls-row {
@@ -161,9 +160,9 @@
     font-weight: 600;
     padding: 10px 16px;
     border-radius: 8px;
-    border: 1px solid var(--border-color);
-    background-color: var(--btn-bg);
-    color: var(--text-main);
+    border: 1px solid #343e46;
+    background-color: #2b333b;
+    color: #e8ecef;
     touch-action: manipulation;
     transition: background-color 0.15s, transform 0.1s;
   }
@@ -178,29 +177,20 @@
   }
 
   .btn-primary {
-    background-color: var(--accent-amber);
+    background-color: #ffb703;
     color: #121619;
-    border-color: var(--accent-amber);
-  }
-
-  .btn-primary:hover:not(:disabled) {
-    background-color: #ffc93c;
+    border-color: #ffb703;
   }
 
   .btn-submit {
-    background-color: var(--accent-green);
+    background-color: #2ec4b6;
     color: #0d1b1e;
-    border-color: var(--accent-green);
+    border-color: #2ec4b6;
     width: 100%;
     padding: 12px;
     font-size: 1.05rem;
   }
 
-  .btn-submit:hover:not(:disabled) {
-    background-color: #45d9cb;
-  }
-
-  /* 輸入區域 */
   .input-section {
     display: flex;
     flex-direction: column;
@@ -210,7 +200,7 @@
 
   .input-label {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: #9aa5b1;
     display: flex;
     justify-content: space-between;
   }
@@ -223,14 +213,14 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     background-color: #121619;
-    border: 2px solid var(--border-color);
+    border: 2px solid #343e46;
     border-radius: 8px;
-    color: var(--text-main);
+    color: #e8ecef;
     outline: none;
   }
 
   input[type="text"]:focus {
-    border-color: var(--accent-amber);
+    border-color: #ffb703;
   }
 
   input[type="text"]:disabled {
@@ -238,7 +228,6 @@
     background-color: #1a2024;
   }
 
-  /* 回饋訊息區 */
   .feedback-box {
     padding: 12px 14px;
     border-radius: 8px;
@@ -253,19 +242,19 @@
 
   .feedback-box.error {
     background-color: rgba(230, 57, 70, 0.15);
-    border: 1px solid var(--accent-red);
+    border: 1px solid #e63946;
     color: #ff8fa3;
   }
 
   .feedback-box.warning {
     background-color: rgba(255, 183, 3, 0.15);
-    border: 1px solid var(--accent-amber);
+    border: 1px solid #ffb703;
     color: #ffd166;
   }
 
   .feedback-box.success {
     background-color: rgba(46, 196, 182, 0.15);
-    border: 1px solid var(--accent-green);
+    border: 1px solid #2ec4b6;
     color: #80ffdb;
   }
 
@@ -274,7 +263,7 @@
     padding: 12px;
     background-color: rgba(0, 0, 0, 0.35);
     border-radius: 6px;
-    border: 1px dashed var(--accent-green);
+    border: 1px dashed #2ec4b6;
     color: #ffffff;
   }
 
@@ -285,7 +274,6 @@
     display: block;
   }
 
-  /* 輔助工具列（提示與對照表） */
   .tools-row {
     display: flex;
     gap: 10px;
@@ -300,7 +288,7 @@
 
   .hint-panel, .chart-panel {
     background-color: #14181c;
-    border: 1px solid var(--border-color);
+    border: 1px solid #343e46;
     border-radius: 8px;
     padding: 12px;
     margin-bottom: 14px;
@@ -318,4 +306,725 @@
   }
 
   .hint-item:last-child {
-    border-bottom
+    border-bottom: none;
+  }
+
+  .morse-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(76px, 1fr));
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .morse-cell {
+    background-color: #1e2429;
+    border: 1px solid #343e46;
+    border-radius: 4px;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 0.85rem;
+  }
+
+  .morse-char {
+    font-weight: bold;
+    color: #ffb703;
+  }
+
+  footer {
+    border-top: 1px solid #343e46;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #9aa5b1;
+  }
+
+  .noscript-warning {
+    background-color: #e63946;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+  }
+
+  .shake-anim {
+    animation: shake 0.35s ease-in-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .shake-anim {
+      animation: none;
+    }
+    .lamp-bulb, button {
+      transition: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="terminal-container" id="appContainer">
+  <noscript>
+    <div class="noscript-warning">
+      ⚠️ 偵測到您的瀏覽器或預覽工具封鎖了互動腳本（JavaScript）。若您正在使用手機「檔案」App 或通訊軟體內建預覽，請改用 Safari、Chrome 或 Edge 瀏覽器開啟此 HTML 檔！
+    </div>
+  </noscript>
+
+  <header>
+    <h1 id="uiTitle">生科教室：緊急通訊終端機</h1>
+    <span class="status-badge" id="statusBadge">🔒 訊號鎖定中</span>
+  </header>
+
+  <div class="story-box" id="storyBox">
+    實驗室的備用電源已啟動，但主控台被未知的摩斯電碼鎖住了。請觀察信號燈閃爍（或聆聽蜂鳴聲），解碼出正確的英數字密碼以開啟下一道門的線索！
+  </div>
+
+  <div class="signal-stage">
+    <div class="lamp-housing">
+      <div class="lamp-bulb" id="lampBulb" aria-label="摩斯密碼信號燈"></div>
+    </div>
+    <div class="signal-indicator-text" id="signalStatusText">點擊「播放訊號」開始接收摩斯電碼</div>
+    <div class="controls-row">
+      <button type="button" class="btn-primary" id="btnPlayToggle">▶ 播放訊號</button>
+      <button type="button" id="btnSpeedToggle">速度：標準</button>
+      <button type="button" id="btnReplay">↻ 重頭播放</button>
+    </div>
+  </div>
+
+  <div class="input-section">
+    <div class="input-label">
+      <span>請輸入解碼後的英數字密碼：</span>
+      <span id="attemptCounter"></span>
+    </div>
+    <input type="text" id="answerInput" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" placeholder="例如：SOS">
+    <button type="button" class="btn-submit" id="btnSubmit">驗證並解鎖</button>
+  </div>
+
+  <div class="feedback-box" id="feedbackBox" role="alert"></div>
+
+  <div class="tools-row">
+    <button type="button" id="btnHint">💡 取得提示 (0/3)</button>
+    <button type="button" id="btnChart">📖 摩斯電碼對照表</button>
+  </div>
+
+  <div class="hint-panel" id="hintPanel"></div>
+
+  <div class="chart-panel" id="chartPanel">
+    <div style="color: #9aa5b1; margin-bottom: 6px;">短閃「・」為 1 單位，長閃「－」為 3 單位，字元間隔為 3 單位：</div>
+    <div class="morse-grid" id="morseGrid"></div>
+  </div>
+
+  <footer>
+    <button type="button" id="btnReset" style="padding: 6px 10px; font-size: 0.8rem;">重新開始</button>
+    <button type="button" id="btnShare" style="padding: 6px 10px; font-size: 0.8rem;">複製關卡連結</button>
+  </footer>
+</div>
+
+<script>
+/**
+ * ============================================================================
+ * 【老師專用設定區 CONFIG】
+ * 只需修改以下設定即可更換題目與行為，不需更動下方程式碼。
+ * ============================================================================
+ */
+const CONFIG = {
+  // 【請替換】關卡標題
+  title: "生科教室：緊急通訊終端機",
+
+  // 【請替換】故事包裝與任務說明（支援純文字）
+  story: "實驗室的備用電源已啟動，但主控台被未知的摩斯電碼鎖住了。請觀察信號燈閃爍（或聆聽蜂鳴聲），解碼出正確的英數字密碼以開啟下一道門的線索！",
+
+  // 【請替換】謎題答案（僅限英文字母 A-Z 與數字 0-9，系統會自動轉大寫，不可含空白或符號）
+  secretMessage: "TECH2026",
+
+  // 【請替換】播放方式："both"（閃光+聲音）、"light"（僅閃光）、"sound"（僅聲音）
+  playMode: "both",
+
+  // 【請替換】基礎速度設定（毫秒，代表一個「短點 dot」的長度；數值越小越快，建議 140 ~ 240）
+  baseDotMs: 180,
+
+  // 【請替換】是否自動循環播放（true = 播完一輪停頓後自動重播；false = 播完一次即停止）
+  loopPlay: true,
+
+  // 【請替換】是否顯示「摩斯電碼對照表」按鈕（設為 false 時，可讓玩家先去實體教室尋找紙本對照表作為前導任務！）
+  enableChartButton: true,
+
+  // 【請替換】答對時顯示的文字與線索
+  successTitle: "🔓 密碼正確！終端機已解除鎖定。",
+  successClueText: "下一關線索：請前往教室後方「3D 列印機台」下方，尋找貼有紅色標籤的零件盒，密碼是 419。",
+
+  // 【請替換】答對時顯示的圖片網址（若不需要圖片，請留空字串 ""；若要完全離線，可貼入 Base64 Data URI）
+  successImageUrl: "",
+
+  // 【請替換】答錯時的預設提示語（系統會自動附加具體錯誤原因，如字數不符或包含無效字元）
+  wrongMessagePrefix: "訊號比對失敗：",
+
+  // 【請替換】分層提示內容（玩家每點一次「取得提示」會依序解鎖一層）
+  hints: [
+    "第 1 層提示：這組密碼總共有 8 個字元，前半段是 4 個英文字母，後半段是 4 個數字。",
+    "第 2 層提示：英文字母是「科技（Technology）」的常見英文縮寫。",
+    "第 3 層提示：後半段的 4 個數字代表「今年」的西元年份。"
+  ],
+
+  // 【請替換】防亂猜機制設定：連續答錯幾次會觸發冷卻鎖定，以及冷卻秒數
+  maxWrongBeforeCooldown: 3,
+  cooldownSeconds: 10,
+
+  // 【請替換】分享連結（留空字串 "" 則自動抓取目前網址）
+  shareUrl: "",
+
+  // 瀏覽器儲存鍵名（若同一台平板會玩多個不同關卡，可修改此名稱避免紀錄互相覆蓋）
+  storageKey: "morse_puzzle_state_v1"
+};
+
+/**
+ * ============================================================================
+ * 系統核心程式區（老師無需修改以下內容）
+ * ============================================================================
+ */
+const MORSE_MAP = {
+  "A": ".-",    "B": "-...",  "C": "-.-.",  "D": "-..",   "E": ".",
+  "F": "..-.",  "G": "--.",   "H": "....",  "I": "..",    "J": ".---",
+  "K": "-.-",   "L": ".-..",  "M": "--",    "N": "-.",    "O": "---",
+  "P": ".--.",  "Q": "--.-",  "R": ".-.",   "S": "...",   "T": "-",
+  "U": "..-",   "V": "...-",  "W": ".--",   "X": "-..-",  "Y": "-.--",
+  "Z": "--..",
+  "0": "-----", "1": ".----", "2": "..---", "3": "...--", "4": "....-",
+  "5": ".....", "6": "-....", "7": "--...", "8": "---..", "9": "----."
+};
+
+const TARGET_ANSWER = String(CONFIG.secretMessage || "SOS").toUpperCase().replace(/[^A-Z0-9]/g, "");
+
+let memoryFallbackState = null;
+
+let state = {
+  isSolved: false,
+  wrongStreak: 0,
+  totalAttempts: 0,
+  unlockedHints: 0,
+  cooldownEndTime: 0
+};
+
+let audioCtx = null;
+let oscillator = null;
+let gainNode = null;
+let isPlaying = false;
+let speedMultiplier = 1;
+let playTimers = [];
+let cooldownInterval = null;
+
+const els = {
+  container: document.getElementById("appContainer"),
+  title: document.getElementById("uiTitle"),
+  statusBadge: document.getElementById("statusBadge"),
+  storyBox: document.getElementById("storyBox"),
+  lampBulb: document.getElementById("lampBulb"),
+  signalStatusText: document.getElementById("signalStatusText"),
+  btnPlayToggle: document.getElementById("btnPlayToggle"),
+  btnSpeedToggle: document.getElementById("btnSpeedToggle"),
+  btnReplay: document.getElementById("btnReplay"),
+  attemptCounter: document.getElementById("attemptCounter"),
+  answerInput: document.getElementById("answerInput"),
+  btnSubmit: document.getElementById("btnSubmit"),
+  feedbackBox: document.getElementById("feedbackBox"),
+  btnHint: document.getElementById("btnHint"),
+  btnChart: document.getElementById("btnChart"),
+  hintPanel: document.getElementById("hintPanel"),
+  chartPanel: document.getElementById("chartPanel"),
+  morseGrid: document.getElementById("morseGrid"),
+  btnReset: document.getElementById("btnReset"),
+  btnShare: document.getElementById("btnShare")
+};
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function saveState() {
+  const payload = JSON.stringify(state);
+  try {
+    localStorage.setItem(CONFIG.storageKey, payload);
+  } catch (e) {
+    memoryFallbackState = payload;
+  }
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(CONFIG.storageKey);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === "object") {
+        state = { ...state, ...parsed };
+      }
+      return;
+    }
+  } catch (e) {}
+  if (memoryFallbackState) {
+    try {
+      state = { ...state, ...JSON.parse(memoryFallbackState) };
+    } catch (e) {}
+  }
+}
+
+function clearSavedState() {
+  try {
+    localStorage.removeItem(CONFIG.storageKey);
+  } catch (e) {}
+  memoryFallbackState = null;
+}
+
+function initAudio() {
+  if (CONFIG.playMode === "light") return;
+  if (!audioCtx) {
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (AudioContextClass) {
+      audioCtx = new AudioContextClass();
+    }
+  }
+  if (audioCtx && audioCtx.state === "suspended") {
+    audioCtx.resume();
+  }
+}
+
+function setTone(on) {
+  if (CONFIG.playMode === "light" || !audioCtx) return;
+  try {
+    if (on) {
+      if (!oscillator) {
+        oscillator = audioCtx.createOscillator();
+        gainNode = audioCtx.createGain();
+        oscillator.type = "sine";
+        oscillator.frequency.setValueAtTime(680, audioCtx.currentTime);
+        gainNode.gain.setValueAtTime(0.001, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.25, audioCtx.currentTime + 0.015);
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        oscillator.start();
+      }
+    } else {
+      if (oscillator) {
+        const oscToStop = oscillator;
+        const gainToStop = gainNode;
+        oscillator = null;
+        gainNode = null;
+        gainToStop.gain.setValueAtTime(gainToStop.gain.value, audioCtx.currentTime);
+        gainToStop.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.015);
+        setTimeout(() => {
+          try { oscToStop.stop(); oscToStop.disconnect(); } catch (e) {}
+        }, 25);
+      }
+    }
+  } catch (e) {}
+}
+
+function setLamp(on) {
+  if (state.isSolved) return;
+  if (CONFIG.playMode === "sound") return;
+  if (on) {
+    els.lampBulb.classList.add("active");
+  } else {
+    els.lampBulb.classList.remove("active");
+  }
+}
+
+function stopPlayback(updateLabel = true) {
+  isPlaying = false;
+  playTimers.forEach(id => clearTimeout(id));
+  playTimers = [];
+  setTone(false);
+  if (!state.isSolved) {
+    els.lampBulb.classList.remove("active");
+  }
+  els.btnPlayToggle.textContent = "▶ 播放訊號";
+  if (updateLabel && !state.isSolved) {
+    els.signalStatusText.textContent = "訊號已暫停";
+  }
+}
+
+function startPlayback() {
+  if (state.isSolved) return;
+  initAudio();
+  stopPlayback(false);
+  isPlaying = true;
+  els.btnPlayToggle.textContent = "⏸ 暫停訊號";
+
+  const dot = Math.round(CONFIG.baseDotMs * speedMultiplier);
+  const dash = dot * 3;
+  const intraGap = dot;
+  const charGap = dot * 3;
+  const wordEndGap = dot * 7;
+
+  let cursor = 100;
+
+  for (let i = 0; i < TARGET_ANSWER.length; i++) {
+    const ch = TARGET_ANSWER[i];
+    const code = MORSE_MAP[ch] || "";
+    const charIndex = i + 1;
+
+    playTimers.push(setTimeout(() => {
+      if (!isPlaying) return;
+      els.signalStatusText.textContent = `正在發送第 ${charIndex} / ${TARGET_ANSWER.length} 碼...`;
+    }, cursor));
+
+    for (let j = 0; j < code.length; j++) {
+      const symbol = code[j];
+      const duration = symbol === "-" ? dash : dot;
+
+      playTimers.push(setTimeout(() => {
+        if (!isPlaying) return;
+        setLamp(true);
+        setTone(true);
+      }, cursor));
+
+      cursor += duration;
+
+      playTimers.push(setTimeout(() => {
+        if (!isPlaying) return;
+        setLamp(false);
+        setTone(false);
+      }, cursor));
+
+      if (j < code.length - 1) {
+        cursor += intraGap;
+      }
+    }
+
+    if (i < TARGET_ANSWER.length - 1) {
+      cursor += charGap;
+    }
+  }
+
+  playTimers.push(setTimeout(() => {
+    if (!isPlaying) return;
+    if (CONFIG.loopPlay) {
+      els.signalStatusText.textContent = "一輪發送完畢，即將重複播放...";
+      playTimers.push(setTimeout(() => {
+        if (isPlaying) startPlayback();
+      }, wordEndGap));
+    } else {
+      stopPlayback(false);
+      els.signalStatusText.textContent = "訊號發送完畢，可點擊重播";
+    }
+  }, cursor + 50));
+}
+
+function triggerShake() {
+  els.container.classList.remove("shake-anim");
+  void els.container.offsetWidth;
+  els.container.classList.add("shake-anim");
+}
+
+function showFeedback(type, htmlContent) {
+  els.feedbackBox.className = `feedback-box visible ${type}`;
+  els.feedbackBox.innerHTML = htmlContent;
+}
+
+function startCooldownTimer() {
+  if (cooldownInterval) clearInterval(cooldownInterval);
+
+  const updateCooldown = () => {
+    const remaining = Math.ceil((state.cooldownEndTime - Date.now()) / 1000);
+    if (remaining > 0) {
+      els.btnSubmit.disabled = true;
+      els.answerInput.disabled = true;
+      els.btnSubmit.textContent = `訊號干擾冷卻中 (${remaining} 秒)`;
+    } else {
+      clearInterval(cooldownInterval);
+      cooldownInterval = null;
+      if (!state.isSolved) {
+        els.btnSubmit.disabled = false;
+        els.answerInput.disabled = false;
+        els.btnSubmit.textContent = "驗證並解鎖";
+        showFeedback("warning", "干擾已排除，請仔細觀察摩斯密碼後再試一次。");
+      }
+    }
+  };
+
+  updateCooldown();
+  cooldownInterval = setInterval(updateCooldown, 250);
+}
+
+function applySolvedState(isInitialRestore = false) {
+  state.isSolved = true;
+  stopPlayback(false);
+
+  els.statusBadge.textContent = "🔓 已解除鎖定";
+  els.statusBadge.classList.add("unlocked");
+  els.lampBulb.classList.remove("active", "error");
+  els.lampBulb.classList.add("solved");
+  els.signalStatusText.textContent = "通訊連線已建立";
+
+  els.answerInput.value = TARGET_ANSWER;
+  els.answerInput.disabled = true;
+  els.btnSubmit.disabled = true;
+  els.btnSubmit.textContent = "已成功解鎖";
+  els.btnPlayToggle.disabled = true;
+  els.btnReplay.disabled = true;
+
+  let clueHtml = `<strong>${escapeHtml(CONFIG.successTitle)}</strong>`;
+  clueHtml += `<div class="clue-card">${escapeHtml(CONFIG.successClueText)}`;
+  if (CONFIG.successImageUrl && CONFIG.successImageUrl.trim() !== "") {
+    clueHtml += `<img src="${escapeHtml(CONFIG.successImageUrl)}" alt="過關線索圖片">`;
+  }
+  clueHtml += `</div>`;
+
+  showFeedback("success", clueHtml);
+  if (!isInitialRestore) {
+    saveState();
+  }
+}
+
+function handleVerify() {
+  if (state.isSolved) {
+    return;
+  }
+
+  if (Date.now() < state.cooldownEndTime) {
+    return;
+  }
+
+  const rawInput = els.answerInput.value.trim().toUpperCase();
+
+  if (!rawInput) {
+    triggerShake();
+    showFeedback("error", `${escapeHtml(CONFIG.wrongMessagePrefix)}請先輸入解碼後的英數字密碼再送出。`);
+    return;
+  }
+
+  if (/[^A-Z0-9]/.test(rawInput)) {
+    triggerShake();
+    showFeedback("error", `${escapeHtml(CONFIG.wrongMessagePrefix)}格式不符規則！摩斯密碼僅包含英文字母（A–Z）與數字（0–9），請勿輸入空白或標點符號。`);
+    return;
+  }
+
+  state.totalAttempts += 1;
+  els.attemptCounter.textContent = `嘗試次數：${state.totalAttempts}`;
+
+  if (rawInput === TARGET_ANSWER) {
+    state.wrongStreak = 0;
+    applySolvedState(false);
+    return;
+  }
+
+  state.wrongStreak += 1;
+  triggerShake();
+
+  els.lampBulb.classList.add("error");
+  setTimeout(() => {
+    if (!state.isSolved) els.lampBulb.classList.remove("error");
+  }, 500);
+
+  let reasonDetail = "";
+  if (rawInput.length !== TARGET_ANSWER.length) {
+    reasonDetail = `字數不符（你輸入了 ${rawInput.length} 碼，但實際訊號共有 ${TARGET_ANSWER.length} 碼）。`;
+  } else {
+    let matchCount = 0;
+    for (let i = 0; i < TARGET_ANSWER.length; i++) {
+      if (rawInput[i] === TARGET_ANSWER[i]) matchCount++;
+    }
+    reasonDetail = `字數正確（共 ${TARGET_ANSWER.length} 碼），但內容與信號不完全一致（目前有 ${matchCount} 碼位置相符）。`;
+  }
+
+  if (state.wrongStreak >= CONFIG.maxWrongBeforeCooldown) {
+    state.wrongStreak = 0;
+    state.cooldownEndTime = Date.now() + CONFIG.cooldownSeconds * 1000;
+    saveState();
+    showFeedback(
+      "error",
+      `${escapeHtml(CONFIG.wrongMessagePrefix)}${escapeHtml(reasonDetail)}<br><strong>偵測到多次錯誤嘗試，終端機進入保護鎖定 ${CONFIG.cooldownSeconds} 秒！</strong>`
+    );
+    startCooldownTimer();
+  } else {
+    const leftTries = CONFIG.maxWrongBeforeCooldown - state.wrongStreak;
+    saveState();
+    showFeedback(
+      "error",
+      `${escapeHtml(CONFIG.wrongMessagePrefix)}${escapeHtml(reasonDetail)}<br><small>再連續錯誤 ${leftTries} 次將觸發訊號冷卻鎖定。</small>`
+    );
+  }
+}
+
+function renderHints() {
+  const hints = Array.isArray(CONFIG.hints) ? CONFIG.hints : [];
+  els.btnHint.textContent = `💡 取得提示 (${state.unlockedHints}/${hints.length})`;
+
+  if (hints.length === 0) {
+    els.btnHint.style.display = "none";
+    return;
+  }
+
+  if (state.unlockedHints === 0) {
+    els.hintPanel.classList.remove("visible");
+    return;
+  }
+
+  let html = "";
+  for (let i = 0; i < state.unlockedHints && i < hints.length; i++) {
+    html += `<div class="hint-item">${escapeHtml(hints[i])}</div>`;
+  }
+  els.hintPanel.innerHTML = html;
+  els.hintPanel.classList.add("visible");
+}
+
+function renderMorseChart() {
+  if (!CONFIG.enableChartButton) {
+    els.btnChart.style.display = "none";
+    return;
+  }
+  let html = "";
+  Object.keys(MORSE_MAP).forEach(char => {
+    const visualCode = MORSE_MAP[char].replace(/\./g, "・").replace(/-/g, "－");
+    html += `<div class="morse-cell"><span class="morse-char">${escapeHtml(char)}</span><span>${escapeHtml(visualCode)}</span></div>`;
+  });
+  els.morseGrid.innerHTML = html;
+}
+
+function resetAll() {
+  stopPlayback(false);
+  if (cooldownInterval) {
+    clearInterval(cooldownInterval);
+    cooldownInterval = null;
+  }
+
+  state = {
+    isSolved: false,
+    wrongStreak: 0,
+    totalAttempts: 0,
+    unlockedHints: 0,
+    cooldownEndTime: 0
+  };
+  clearSavedState();
+
+  els.statusBadge.textContent = "🔒 訊號鎖定中";
+  els.statusBadge.classList.remove("unlocked");
+  els.lampBulb.className = "lamp-bulb";
+  els.signalStatusText.textContent = "點擊「播放訊號」開始接收摩斯電碼";
+
+  els.answerInput.value = "";
+  els.answerInput.disabled = false;
+  els.btnSubmit.disabled = false;
+  els.btnSubmit.textContent = "驗證並解鎖";
+  els.btnPlayToggle.disabled = false;
+  els.btnReplay.disabled = false;
+  els.attemptCounter.textContent = "";
+
+  els.feedbackBox.className = "feedback-box";
+  els.feedbackBox.innerHTML = "";
+  els.chartPanel.classList.remove("visible");
+
+  renderHints();
+}
+
+function bindEvents() {
+  els.btnPlayToggle.addEventListener("pointerup", () => {
+    if (state.isSolved) return;
+    if (isPlaying) {
+      stopPlayback(true);
+    } else {
+      startPlayback();
+    }
+  });
+
+  els.btnReplay.addEventListener("pointerup", () => {
+    if (state.isSolved) return;
+    startPlayback();
+  });
+
+  els.btnSpeedToggle.addEventListener("pointerup", () => {
+    if (speedMultiplier === 1) {
+      speedMultiplier = 1.6;
+      els.btnSpeedToggle.textContent = "速度：慢速 (教學)";
+    } else {
+      speedMultiplier = 1;
+      els.btnSpeedToggle.textContent = "速度：標準";
+    }
+    if (isPlaying) {
+      startPlayback();
+    }
+  });
+
+  els.btnSubmit.addEventListener("pointerup", handleVerify);
+
+  els.answerInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleVerify();
+    }
+  });
+
+  els.btnHint.addEventListener("pointerup", () => {
+    const hints = Array.isArray(CONFIG.hints) ? CONFIG.hints : [];
+    if (state.unlockedHints < hints.length) {
+      state.unlockedHints += 1;
+      saveState();
+    }
+    renderHints();
+  });
+
+  els.btnChart.addEventListener("pointerup", () => {
+    els.chartPanel.classList.toggle("visible");
+  });
+
+  els.btnReset.addEventListener("pointerup", () => {
+    resetAll();
+  });
+
+  els.btnShare.addEventListener("pointerup", async () => {
+    const urlToCopy = (CONFIG.shareUrl && CONFIG.shareUrl.trim() !== "") ? CONFIG.shareUrl : window.location.href;
+    try {
+      await navigator.clipboard.writeText(urlToCopy);
+      const originalText = els.btnShare.textContent;
+      els.btnShare.textContent = "✓ 已複製連結";
+      setTimeout(() => { els.btnShare.textContent = originalText; }, 2000);
+    } catch (e) {
+      alert("請手動複製此網址分享：\n" + urlToCopy);
+    }
+  });
+}
+
+function initApp() {
+  els.title.textContent = CONFIG.title;
+  els.storyBox.textContent = CONFIG.story;
+
+  renderMorseChart();
+  loadState();
+  renderHints();
+
+  if (state.totalAttempts > 0) {
+    els.attemptCounter.textContent = `嘗試次數：${state.totalAttempts}`;
+  }
+
+  if (state.isSolved) {
+    applySolvedState(true);
+  } else if (Date.now() < state.cooldownEndTime) {
+    startCooldownTimer();
+  }
+
+  bindEvents();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initApp);
+} else {
+  initApp();
+}
+</script>
+</body>
+</html>
